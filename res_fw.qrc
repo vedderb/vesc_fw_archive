@@ -812,6 +812,7 @@
         <file>6.02/A200S_V4/VESC_default.bin</file>
         <file>6.02/100_250/VESC_default.bin</file>
         <file>6.02/100_250/VESC_default_no_hw_limits.bin</file>
+        <file>6.02/100_250_mkiii/VESC_default.bin</file>
         <file>6.02/LUNA_BBSHD/VESC_default.bin</file>
         <file>6.02/LUNA_M600/VESC_default.bin</file>
         <file>6.02/LUNA_M600_V2/VESC_default.bin</file>
