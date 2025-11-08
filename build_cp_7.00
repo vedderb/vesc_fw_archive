@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+FWPATH="../ARM/STM_Eclipse/BLDC_4_ChibiOS/"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+rm -rf $FWPATH/package/*
+
+cd $FWPATH
+git checkout master
+make all_fw_clean
+make all_fw -j24
+sleep 1
+python3 package_firmware.py
+make all_fw_clean
+git checkout master
+
+NAME="7.00"
+cd $DIR
+rm -rf $NAME/*
+cp -r $FWPATH/package/* $NAME/
+cp $FWPATH/CHANGELOG.md $NAME/
+
+rm -r $FWPATH/package/*

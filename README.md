@@ -5,7 +5,7 @@ This repository contains compiled old VESC Firmwares the way they were included 
 ## Create Qt Resource Package
 
 ```bash
-rcc -binary res_fw.qrc -o res_fw.rcc
+rcc -binary in_res_fw.qrc -o res_fw.rcc
 ```
 
 ## Pull Requests
