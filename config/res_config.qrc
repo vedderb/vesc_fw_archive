@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/res/config_download/">
-    	<file>fw.xml</file>
+        <file>CHANGELOG.md</file>
+        <file>fw.xml</file>
         <file>3.63/info.xml</file>
         <file>3.63/parameters_appconf.xml</file>
         <file>3.63/parameters_mcconf.xml</file>

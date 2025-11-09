@@ -20,7 +20,6 @@ NAME="6.06"
 cd $DIR
 rm -rf $NAME/*
 cp -r $FWPATH/package/* $NAME/
-cp $FWPATH/CHANGELOG.md $NAME/
 
 rm -r $FWPATH/package/*
 
