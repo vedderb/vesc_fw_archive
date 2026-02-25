@@ -1,0 +1,66 @@
+
+<RCC>
+   <qresource prefix="/res/firmwares_esp/">
+        <file>esp32c3/BMS RB/bootloader.bin</file>
+        <file>esp32c3/BMS RB/partition-table.bin</file>
+        <file>esp32c3/BMS RB/vesc_express.bin</file>
+        <file>esp32c3/Dash16/bootloader.bin</file>
+        <file>esp32c3/Dash16/partition-table.bin</file>
+        <file>esp32c3/Dash16/vesc_express.bin</file>
+        <file>esp32c3/Devkit C3/bootloader.bin</file>
+        <file>esp32c3/Devkit C3/partition-table.bin</file>
+        <file>esp32c3/Devkit C3/vesc_express.bin</file>
+        <file>esp32c3/Duet Expr/bootloader.bin</file>
+        <file>esp32c3/Duet Expr/partition-table.bin</file>
+        <file>esp32c3/Duet Expr/vesc_express.bin</file>
+        <file>esp32c3/Lifan Reg/bootloader.bin</file>
+        <file>esp32c3/Lifan Reg/partition-table.bin</file>
+        <file>esp32c3/Lifan Reg/vesc_express.bin</file>
+        <file>esp32c3/Nanolog/bootloader.bin</file>
+        <file>esp32c3/Nanolog/partition-table.bin</file>
+        <file>esp32c3/Nanolog/vesc_express.bin</file>
+        <file>esp32c3/Rmcore/bootloader.bin</file>
+        <file>esp32c3/Rmcore/partition-table.bin</file>
+        <file>esp32c3/Rmcore/vesc_express.bin</file>
+        <file>esp32c3/STR365 IO/bootloader.bin</file>
+        <file>esp32c3/STR365 IO/partition-table.bin</file>
+        <file>esp32c3/STR365 IO/vesc_express.bin</file>
+        <file>esp32c3/VBMS16/bootloader.bin</file>
+        <file>esp32c3/VBMS16/partition-table.bin</file>
+        <file>esp32c3/VBMS16/vesc_express.bin</file>
+        <file>esp32c3/VBMS32/bootloader.bin</file>
+        <file>esp32c3/VBMS32/partition-table.bin</file>
+        <file>esp32c3/VBMS32/vesc_express.bin</file>
+        <file>esp32c3/VDisp/bootloader.bin</file>
+        <file>esp32c3/VDisp/partition-table.bin</file>
+        <file>esp32c3/VDisp/vesc_express.bin</file>
+        <file>esp32c3/VDisp 900/bootloader.bin</file>
+        <file>esp32c3/VDisp 900/partition-table.bin</file>
+        <file>esp32c3/VDisp 900/vesc_express.bin</file>
+        <file>esp32c3/VDisp Dual/bootloader.bin</file>
+        <file>esp32c3/VDisp Dual/partition-table.bin</file>
+        <file>esp32c3/VDisp Dual/vesc_express.bin</file>
+        <file>esp32c3/VESC Express T/bootloader.bin</file>
+        <file>esp32c3/VESC Express T/partition-table.bin</file>
+        <file>esp32c3/VESC Express T/vesc_express.bin</file>
+        <file>esp32c3/VESC Stick/bootloader.bin</file>
+        <file>esp32c3/VESC Stick/partition-table.bin</file>
+        <file>esp32c3/VESC Stick/vesc_express.bin</file>
+        <file>esp32c3/VL Link/bootloader.bin</file>
+        <file>esp32c3/VL Link/partition-table.bin</file>
+        <file>esp32c3/VL Link/vesc_express.bin</file>
+        <file>esp32c3/VL Scope/bootloader.bin</file>
+        <file>esp32c3/VL Scope/partition-table.bin</file>
+        <file>esp32c3/VL Scope/vesc_express.bin</file>
+        <file>esp32s3/Avaspark RGB V3/bootloader.bin</file>
+        <file>esp32s3/Avaspark RGB V3/partition-table.bin</file>
+        <file>esp32s3/Avaspark RGB V3/vesc_express.bin</file>
+        <file>esp32s3/Devkit S3/bootloader.bin</file>
+        <file>esp32s3/Devkit S3/partition-table.bin</file>
+        <file>esp32s3/Devkit S3/vesc_express.bin</file>
+        <file>esp32s3/rESCue S3/bootloader.bin</file>
+        <file>esp32s3/rESCue S3/partition-table.bin</file>
+        <file>esp32s3/rESCue S3/vesc_express.bin</file>
+   </qresource>
+</RCC>
+

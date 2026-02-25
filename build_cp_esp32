@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+FWPATH="../ESP32/vesc_express"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+rm -rf $FWPATH/build/*
+rm -rf $FWPATH/build_output/*
+
+cd $FWPATH
+git checkout main
+rm -rf sdkconfig
+. $HOME/Dokument/esp32/esp-idf-v5.2.2/export.sh
+python3 build_all.py
+
+NAME="esp32"
+cd $DIR
+rm -rf $NAME/*
+cp -r $FWPATH/build_output/* $NAME/
+
+rm -rf $FWPATH/build/*
+rm -rf $FWPATH/build_output/*
+

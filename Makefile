@@ -9,6 +9,9 @@ fw_6.06:
 
 fw_7.00:
 	rcc -binary 7.00/res_fw.qrc -o res_fw_7.00.rcc
+
+fw_esp32:
+	rcc -binary esp32/res_fw.qrc -o res_fw_esp32.rcc
 	
 clean:
 	rm -f res_config.rcc

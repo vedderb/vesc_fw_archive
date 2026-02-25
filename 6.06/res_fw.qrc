@@ -178,10 +178,18 @@
         <file>Maximp_150/VESC_default_no_hw_limits.bin</file>
         <file>Duet/VESC_default.bin</file>
         <file>Duet/VESC_default_no_hw_limits.bin</file>
+        <file>Duet XS100/VESC_default.bin</file>
+        <file>Duet XS100/VESC_default_no_hw_limits.bin</file>
+        <file>Duet XS60/VESC_default.bin</file>
+        <file>Duet XS60/VESC_default_no_hw_limits.bin</file>
         <file>Minim/VESC_default.bin</file>
         <file>Minim/VESC_default_no_hw_limits.bin</file>
         <file>Pronto/VESC_default.bin</file>
         <file>Pronto/VESC_default_no_hw_limits.bin</file>
+        <file>Classic/VESC_default.bin</file>
+        <file>Classic/VESC_default_no_hw_limits.bin</file>
+        <file>Classicp/VESC_default.bin</file>
+        <file>Classicp/VESC_default_no_hw_limits.bin</file>
    </qresource>
 </RCC>
 
