@@ -52,12 +52,24 @@
         <file>esp32c3/VL Scope/bootloader.bin</file>
         <file>esp32c3/VL Scope/partition-table.bin</file>
         <file>esp32c3/VL Scope/vesc_express.bin</file>
+        <file>esp32c3/Wcore/bootloader.bin</file>
+        <file>esp32c3/Wcore/partition-table.bin</file>
+        <file>esp32c3/Wcore/vesc_express.bin</file>
+        <file>esp32c6/Devkit C6/bootloader.bin</file>
+        <file>esp32c6/Devkit C6/partition-table.bin</file>
+        <file>esp32c6/Devkit C6/vesc_express.bin</file>
         <file>esp32s3/Avaspark RGB V3/bootloader.bin</file>
         <file>esp32s3/Avaspark RGB V3/partition-table.bin</file>
         <file>esp32s3/Avaspark RGB V3/vesc_express.bin</file>
         <file>esp32s3/Devkit S3/bootloader.bin</file>
         <file>esp32s3/Devkit S3/partition-table.bin</file>
         <file>esp32s3/Devkit S3/vesc_express.bin</file>
+        <file>esp32s3/S3 FH4R2/bootloader.bin</file>
+        <file>esp32s3/S3 FH4R2/partition-table.bin</file>
+        <file>esp32s3/S3 FH4R2/vesc_express.bin</file>
+        <file>esp32s3/S3 N16R8/bootloader.bin</file>
+        <file>esp32s3/S3 N16R8/partition-table.bin</file>
+        <file>esp32s3/S3 N16R8/vesc_express.bin</file>
         <file>esp32s3/rESCue S3/bootloader.bin</file>
         <file>esp32s3/rESCue S3/partition-table.bin</file>
         <file>esp32s3/rESCue S3/vesc_express.bin</file>

@@ -11,7 +11,7 @@ rm -rf $FWPATH/build_output/*
 cd $FWPATH
 git checkout main
 rm -rf sdkconfig
-. $HOME/Dokument/esp32/esp-idf-v5.2.2/export.sh
+. $HOME/Dokument/esp32/esp-idf-v5.5.4/export.sh
 python3 build_all.py
 
 NAME="esp32"

@@ -758,6 +758,36 @@ p, li { white-space: pre-wrap; }
             <suffix></suffix>
             <vTx>7</vTx>
         </l_duty_start>
+        <l_additional_faults>
+            <longName>Additional Faults</longName>
+            <type>6</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Encoder Slip&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check for mechanical slip by comparing the FOC observer phase against the physical encoder phase. If enabled, a fault will be triggered if the phase gap exceeds 15 degrees for more than 500ms while spinning. This check will only be performed while the ERPM is higher than the Openloop ERPM setting.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Overspeed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Triggers a fault code if the ERPM exceeds the Max ERPM limit.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Underspeed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Triggers a fault code if the reverse ERPM exceeds the Max ERPM Reverse limit.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Absolute Overspeed&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Triggers a fault code if absolute ERPM exceeds the highest of the Max ERPM and Max ERPM reverse limits.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_L_ADDITIONAL_FAULTS</cDefine>
+            <valInt>0</valInt>
+            <enumNames>Encoder Slip</enumNames>
+            <enumNames>Overspeed</enumNames>
+            <enumNames>Underspeed</enumNames>
+            <enumNames>Absolute Overspeed</enumNames>
+            <enumNames>Unused</enumNames>
+            <enumNames>Unused</enumNames>
+            <enumNames>Unused</enumNames>
+            <enumNames>Unused</enumNames>
+        </l_additional_faults>
         <sl_min_erpm>
             <longName>Minimum ERPM</longName>
             <type>1</type>
@@ -2918,6 +2948,28 @@ p, li { white-space: pre-wrap; }
             <suffix> %</suffix>
             <vTx>7</vTx>
         </foc_fw_q_current_factor>
+        <foc_fw_backoff>
+            <longName>Backoff Gain</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;When more field weakening than is possible to achieve is requested the current controller will place almost all voltage in vd. When that happens we can enter a runaway condition where the iq controller does not have enough headroom to overcome the D axis coupling. The backoff gain uses the iq error to reduce the field weakening setpoint when iq is greater than iq_target.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_FOC_FW_BACKOFF</cDefine>
+            <editorDecimalsDouble>3</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxDouble>10</maxDouble>
+            <minDouble>0</minDouble>
+            <showDisplay>1</showDisplay>
+            <stepDouble>0.01</stepDouble>
+            <valDouble>1</valDouble>
+            <vTxDoubleScale>1000</vTxDoubleScale>
+            <suffix> </suffix>
+            <vTx>7</vTx>
+        </foc_fw_backoff>
         <foc_fw_ramp_time>
             <longName>Field Weakening Ramp Time</longName>
             <type>1</type>
@@ -2995,6 +3047,28 @@ p, li { white-space: pre-wrap; }
             <suffix></suffix>
             <vTx>7</vTx>
         </foc_overmod_factor>
+        <foc_mag_vd_max>
+            <longName>Maximum VD Magnitude</longName>
+            <type>1</type>
+            <transmittable>1</transmittable>
+            <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; ; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;FOC maximum D axis voltage magnitude. When saturating the voltage output of the current controller the D axis has priority. Setting this value to less than 1.0 leaves some voltage headroom for the Q axis controller under full modulation in situations where the D axis tries to use all available voltage.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+            <cDefine>MCCONF_FOC_MAG_VD_MAX</cDefine>
+            <editorDecimalsDouble>3</editorDecimalsDouble>
+            <editorScale>1</editorScale>
+            <editAsPercentage>0</editAsPercentage>
+            <maxDouble>1</maxDouble>
+            <minDouble>0.4</minDouble>
+            <showDisplay>1</showDisplay>
+            <stepDouble>0.005</stepDouble>
+            <valDouble>0.98</valDouble>
+            <vTxDoubleScale>10000</vTxDoubleScale>
+            <suffix></suffix>
+            <vTx>7</vTx>
+        </foc_mag_vd_max>
         <sp_pid_loop_rate>
             <longName>PID Loop Rate</longName>
             <type>4</type>
@@ -3723,7 +3797,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use the PPM/PWM input until the ABI index-pulse is found, then switch to ABI mode. Make sure that the PPM-app is disabled.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;MA782&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;MPS MA782 encoder. Require HW SPI.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;MPS MA782 encoder. Require HW SPI.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;AMT22 (SW SPI)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;AMT22 encoder connected over software SPI on the hall sensor port. SCK connects to HALL1, MISO to HALL2 and CS to HALL3. Note that MOSI on the encoder must be connected to GND.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>MCCONF_M_SENSOR_PORT_MODE</cDefine>
             <valInt>0</valInt>
             <enumNames>Hall Sensors</enumNames>
@@ -3742,6 +3820,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>PWM</enumNames>
             <enumNames>PWM + ABI</enumNames>
             <enumNames>MA782</enumNames>
+            <enumNames>AMT22 (SW SPI)</enumNames>
         </m_sensor_port_mode>
         <m_invert_direction>
             <longName>Invert Motor Direction</longName>
@@ -4653,6 +4732,7 @@ p, li { white-space: pre-wrap; }
         <ser>l_current_max_scale</ser>
         <ser>l_current_min_scale</ser>
         <ser>l_duty_start</ser>
+        <ser>l_additional_faults</ser>
         <ser>sl_min_erpm</ser>
         <ser>sl_min_erpm_cycle_int_limit</ser>
         <ser>sl_max_fullbreak_current_dir_change</ser>
@@ -4750,9 +4830,11 @@ p, li { white-space: pre-wrap; }
         <ser>foc_fw_duty_start</ser>
         <ser>foc_fw_ramp_time</ser>
         <ser>foc_fw_q_current_factor</ser>
+        <ser>foc_fw_backoff</ser>
         <ser>foc_speed_soure</ser>
         <ser>foc_short_ls_on_zero_duty</ser>
         <ser>foc_overmod_factor</ser>
+        <ser>foc_mag_vd_max</ser>
         <ser>sp_pid_loop_rate</ser>
         <ser>s_pid_kp</ser>
         <ser>s_pid_ki</ser>
@@ -4934,6 +5016,7 @@ p, li { white-space: pre-wrap; }
                     <param>m_fault_stop_time_ms</param>
                     <param>m_out_aux_mode</param>
                     <param>l_duty_start</param>
+                    <param>l_additional_faults</param>
                 </subgroupParams>
             </subgroup>
         </group>
@@ -5125,6 +5208,7 @@ p, li { white-space: pre-wrap; }
                     <param>foc_fw_duty_start</param>
                     <param>foc_fw_ramp_time</param>
                     <param>foc_fw_q_current_factor</param>
+                    <param>foc_fw_backoff</param>
                 </subgroupParams>
             </subgroup>
             <subgroup>
@@ -5147,6 +5231,7 @@ p, li { white-space: pre-wrap; }
                     <param>foc_speed_soure</param>
                     <param>foc_short_ls_on_zero_duty</param>
                     <param>foc_overmod_factor</param>
+                    <param>foc_mag_vd_max</param>
                 </subgroupParams>
             </subgroup>
         </group>
