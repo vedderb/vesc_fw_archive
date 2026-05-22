@@ -213,6 +213,10 @@
         <file>Maximp_120_PH/VESC_default_no_hw_limits.bin</file>
         <file>Maximp_150_PH/VESC_default.bin</file>
         <file>Maximp_150_PH/VESC_default_no_hw_limits.bin</file>
+        <file>Maxim_120_PH/VESC_default.bin</file>
+        <file>Maxim_120_PH/VESC_default_no_hw_limits.bin</file>
+        <file>Maxim_150_PH/VESC_default.bin</file>
+        <file>Maxim_150_PH/VESC_default_no_hw_limits.bin</file>
    </qresource>
 </RCC>
 
