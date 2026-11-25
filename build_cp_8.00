@@ -16,7 +16,7 @@ python3 package_firmware.py
 make all_fw_clean
 git checkout master
 
-NAME="7.01"
+NAME="8.00"
 cd $DIR
 rm -rf $NAME/*
 cp -r $FWPATH/package/* $NAME/
